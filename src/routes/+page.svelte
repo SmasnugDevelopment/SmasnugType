@@ -3,6 +3,7 @@
 	let display = $state('type');
 	let startTime = $state(0);
 	let time = $state(0);
+	let wpm = $derived('smasnug'.length / 5 / (time / 60000));
 
 	function startTimer() {
 		startTime = Date.now();
@@ -64,4 +65,5 @@
 	</div>
 {:else if display === 'result'}
 	<div class="text-9xl">{time}ms</div>
+	<div class="text-9xl">{wpm}wpm</div>
 {:else}{/if}
