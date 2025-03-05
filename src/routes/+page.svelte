@@ -36,8 +36,10 @@
 <svelte:document onkeydown={keyDown} />
 
 {#if display === 'type'}
-	<div>{inputText}</div>
-	{#if inputText.length == 0}<div class="text-gray-500">smasnug</div>{/if}
+	<div>
+		<div class="absolute">{inputText}</div>
+		<div class="text-gray-500">smasnug</div>
+	</div>
 {:else if display === 'result'}
 	<div>🎉</div>
 {:else}{/if}
