@@ -1,5 +1,6 @@
 <script lang="ts">
 	let inputText = $state('');
+	let display = $state('type');
 
 	function keyDown(e: KeyboardEvent) {
 		if (e.key === 'Backspace') {
@@ -9,6 +10,10 @@
 			e.preventDefault();
 		} else if (e.key.length === 1) {
 			inputText += e.key;
+		}
+
+		if (inputText === 'smasnug') {
+			display = 'result';
 		}
 	}
 </script>
