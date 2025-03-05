@@ -7,6 +7,7 @@
 			inputText = inputText.slice(0, -1);
 		} else if (e.key === 'Tab' || e.key === 'Escape') {
 			inputText = '';
+            display = 'type';
 			e.preventDefault();
 		} else if (e.key.length === 1) {
 			inputText += e.key;
@@ -14,6 +15,7 @@
 
 		if (inputText === 'smasnug') {
 			display = 'result';
+			inputText = '';
 		}
 	}
 </script>
