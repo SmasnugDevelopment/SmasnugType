@@ -1,6 +1,19 @@
 <script lang="ts">
 	let inputText = $state('');
 	let display = $state('type');
+	let startTime = $state(0);
+	let time = $state(0);
+
+	function startTimer() {
+		startTime = Date.now();
+		console.log('start');
+	}
+
+	function endTimer() {
+		const endTime = Date.now();
+		const timeDiff = endTime - startTime;
+		return timeDiff;
+	}
 
 	function keyDown(e: KeyboardEvent) {
 		if (display == 'type') {
@@ -8,6 +21,10 @@
 				inputText = inputText.slice(0, -1);
 			}
 			if (e.key.length === 1) {
+				if (inputText === '') {
+					startTimer();
+				}
+
 				inputText += e.key;
 			}
 
@@ -17,6 +34,10 @@
 			}
 		} else if (display == 'result') {
 			if (e.key.length === 1) {
+				if (inputText === '') {
+					startTimer();
+				}
+
 				display = 'type';
 				inputText = e.key;
 			}
