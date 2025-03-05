@@ -12,3 +12,5 @@
 </svelte:head>
 
 <svelte:document onkeypress={keyDown} />
+
+<div>{inputText}</div>
