@@ -1,2 +1,14 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	let inputText = '';
+
+	function keyDown(e: KeyboardEvent) {
+		inputText += e.key;
+		console.log(inputText);
+	}
+</script>
+
+<svelte:head>
+	<title>SmasnugType</title>
+</svelte:head>
+
+<svelte:document onkeypress={keyDown} />
