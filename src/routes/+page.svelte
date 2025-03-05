@@ -4,6 +4,7 @@
 	let startTime = $state(0);
 	let time = $state(0);
 	let wpm = $derived('smasnug'.length / 5 / (time / 60000));
+	let roundedWpm = $derived(Math.round(wpm * 100) / 100);
 
 	function startTimer() {
 		startTime = Date.now();
@@ -65,5 +66,5 @@
 	</div>
 {:else if display === 'result'}
 	<div class="text-9xl">{time}ms</div>
-	<div class="text-9xl">{wpm}wpm</div>
+	<div class="text-9xl">{roundedWpm} wpm</div>
 {:else}{/if}
