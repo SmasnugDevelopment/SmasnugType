@@ -1,5 +1,5 @@
 <script lang="ts">
-	let inputText = '';
+	let inputText = $state('');
 
 	function keyDown(e: KeyboardEvent) {
 		inputText += e.key;
