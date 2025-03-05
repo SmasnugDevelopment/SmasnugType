@@ -4,7 +4,6 @@
 	function keyDown(e: KeyboardEvent) {
 		if (e.key === 'Backspace') {
 			inputText = inputText.slice(0, -1);
-		} else if (e.key === 'Enter') {
 		} else if (e.key === 'Tab' || e.key === 'Escape') {
 			inputText = '';
 			e.preventDefault();
