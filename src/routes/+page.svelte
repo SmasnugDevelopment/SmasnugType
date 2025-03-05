@@ -37,6 +37,7 @@
 
 {#if display === 'type'}
 	<div>{inputText}</div>
+	{#if inputText.length == 0}<div class="text-gray-500">Type smasnug</div>{/if}
 {:else if display === 'result'}
 	<div>🎉</div>
 {:else}{/if}
