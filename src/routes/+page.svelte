@@ -30,7 +30,7 @@
 
 			if (inputText === 'smasnug') {
 				display = 'result';
-                time = endTimer();
+				time = endTimer();
 				inputText = '';
 			}
 		} else if (display == 'result') {
@@ -63,5 +63,5 @@
 		<div class="text-gray-500">smasnug</div>
 	</div>
 {:else if display === 'result'}
-	<div>{time}</div>
+	<div class="text-9xl">{time}ms</div>
 {:else}{/if}
