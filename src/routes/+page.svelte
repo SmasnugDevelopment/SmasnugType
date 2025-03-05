@@ -36,7 +36,7 @@
 <svelte:document onkeydown={keyDown} />
 
 {#if display === 'type'}
-	<div>
+	<div class="text-4xl">
 		<div class="absolute">{inputText}</div>
 		<div class="text-gray-500">smasnug</div>
 	</div>
