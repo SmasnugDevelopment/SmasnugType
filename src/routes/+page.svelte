@@ -68,3 +68,5 @@
 	<div class="text-9xl">{time}ms</div>
 	<div class="text-9xl">{roundedWpm} wpm</div>
 {:else}{/if}
+
+<div class="fixed bottom-2 left-2">Tab/Esc to restart</div>
